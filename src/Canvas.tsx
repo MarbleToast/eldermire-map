@@ -4,6 +4,7 @@ import { HexagonData } from "./App";
 import locations from "./locations";
 import zonePaths from "./zones";
 import Noise from "noisejs";
+import autoencounters from "./autoencounters";
 
 function hexagon(x: number, y: number, r: number) {
     let angle = 0;
@@ -96,6 +97,11 @@ const Canvas: React.FC<CanvasProps> = ({
                             context.lineWidth = 1;
                             context.strokeStyle = "pink";
                             context.setLineDash([]);
+                        } else if (h.encounter && showLocations) {
+                            context.fillStyle = "rgba(64, 0, 64, 0.5)";
+                            context.lineWidth = 1.5;
+                            context.strokeStyle = "pink";
+                            context.setLineDash([3, 3]);
                         } else {
                             context.lineWidth = 0.1;
                             context.strokeStyle = "black";
@@ -138,6 +144,11 @@ const Canvas: React.FC<CanvasProps> = ({
                                 context.lineWidth = 1;
                                 context.strokeStyle = "pink";
                                 context.setLineDash([]);
+                            } else if (autoencounters[i] && showLocations) {
+                                context.fillStyle = "rgba(100, 255, 40, 0.5)";
+                                context.lineWidth = 1.5;
+                                context.strokeStyle = "pink";
+                                context.setLineDash([3, 3]);
                             } else {
                                 context.lineWidth = 0.1;
                                 context.strokeStyle = "black";
@@ -166,6 +177,7 @@ const Canvas: React.FC<CanvasProps> = ({
                                 shade,
                                 wind: getWind(x, y),
                                 location: locations[i],
+                                encounter: autoencounters[i],
                             });
                             i++;
                         }

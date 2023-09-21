@@ -14,6 +14,7 @@ export type HexagonData = {
     shade: number;
     wind: number;
     location?: string;
+    encounter?: string;
 };
 
 export type QuestData = {
@@ -101,6 +102,8 @@ const App: React.FunctionComponent = () => {
                             backgroundColor: "white",
                         }}
                     >
+                        <i>1 Tile = 1/2 Watch = 2 hours</i>
+
                         {cursorPos && `(${cursorPos[0]}, ${cursorPos[1]})`}
                         {selectedHex ? (
                             <div
@@ -111,7 +114,9 @@ const App: React.FunctionComponent = () => {
                             >
                                 <span>
                                     <b>Selected: </b>
-                                    {selectedHex.location || selectedHex.id}
+                                    {selectedHex.location ||
+                                        selectedHex.encounter ||
+                                        selectedHex.id}
                                 </span>
                                 <span>Precipitation: {selectedHex.shade}</span>
                                 <span>Wind Speed: {selectedHex.wind}</span>
@@ -126,7 +131,9 @@ const App: React.FunctionComponent = () => {
                             >
                                 <span>
                                     <b>Hovered: </b>
-                                    {hoveredHex.location || hoveredHex.id}
+                                    {hoveredHex.location ||
+                                        hoveredHex.encounter ||
+                                        hoveredHex.id}
                                 </span>
                                 <span>Precipitation: {hoveredHex.shade}</span>
                                 <span>Wind Speed: {hoveredHex.wind}</span>
@@ -305,6 +312,7 @@ const App: React.FunctionComponent = () => {
                         }
                     />
                 )}
+
                 <div
                     style={{
                         position: "absolute",
