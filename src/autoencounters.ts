@@ -1,6 +1,6 @@
 const autoencounters: Record<number, string> = {
     // === THE KNOTS ===
-    4182: "Miremal Path",
+    4182: "Miremal Path and Wounded Serpopard",
     4139: "Miremal Path",
     4055: "Miremal Path",
     4014: "Miremal Path",
@@ -18,9 +18,8 @@ const autoencounters: Record<number, string> = {
     3549: "Spirit Elf Battalion (Night)",
     3508: "Spirit Elf Battalion (Night)",
     3592: "Spirit Elf Battalion (Night)",
-
-    4351: "Moonweaver in a Bush",
-    4392: "Moonweaver in a Bush",
+    4435: "Blood Trail towards Wolf Cave", //"Moonweaver in a Bush, Blood Trail?",
+    //4392: "Moonweaver in a Bush",
 
     3931: "Mini Map",
 
@@ -55,6 +54,10 @@ const autoencounters: Record<number, string> = {
 
     4223: "Serpopard Den",
 
+    4476: "Glademoor Bank of River",
+
+    4267: "Inhabited Farmhouse",
+
     // === GLADEMOOR ===
     4226: "Amber Blossoms",
     4142: "Amber Blossoms",
@@ -63,11 +66,13 @@ const autoencounters: Record<number, string> = {
     4269: "Amber Blossoms",
     4227: "Amber Blossoms",
 
-    4478: "Bog Iron Deposits",
+    4478: "Bog Iron Deposits, Fort Nirunna Step-send",
 
     4310: "Old Ruins",
 
-    4435: "Wolf-attacked Hamlet",
+    4351: "Aniel, Hamlet of Ghosts",
+    4309: "Fording the River to Glademoor",
+    3932: "Six-Knives camp", // Trying to hide from the wreckage of the Savage Dawn. They are sick and do not fight, but beg for their lives
 
     // === MÓDAR RUN
     2841: "Incarnate Gloom (d8?)",
@@ -95,11 +100,17 @@ const autoencounters: Record<number, string> = {
 
     4180: "Dead Horses", // Shot with Gith arrows
 
+    4431: "Mine Surveyor Expedition", // Sonya Quinn is a wealthy mason from Meridian with Holdric Casterwell and Timothy Williams. She is looking to reopen the mine, and is quite an aggressive character. They have brought pickaxes, satches of drakedust (thermite), and prospecting gear to determine the value of reopening the former iron mine, currently inhabited b the moon weavers.
+
     // === FUMEPOOLS ===
     3420: "Wyvern Spotting",
     3378: "Wyvern Spotting",
     3462: "Wyvern Spotting",
     3504: "Wyvern Spotting",
+
+    // === CRAGRIVER PASS ===
+
+    3766: "Enthralled Six-Knives",
 };
 
 export default autoencounters;

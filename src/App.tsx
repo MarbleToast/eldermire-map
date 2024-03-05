@@ -46,6 +46,23 @@ const App: React.FunctionComponent = () => {
     const [showRain, setShowRain] = useState(true);
     const [showZones, setShowZones] = useState(true);
     const [cursorPos, setCursorPos] = useState<[number, number] | null>(null);
+    const [currentTime, setCurrentTime] = useState<number>(4);
+
+    useEffect(() => {
+        advanceTime();
+        if (Math.floor(Math.random() * 20) + 1 >= 17) {
+            setTimeout(
+                () =>
+                    alert(
+                        "A random travel complication appears! Number " +
+                            (Math.floor(Math.random() * 12) + 1)
+                    ),
+                200
+            );
+        }
+    }, [currentWatch]);
+
+    const advanceTime = () => setCurrentTime((currentTime + 2) % 24);
 
     const selectedHex = currentSelected && hexs[currentSelected];
     const hoveredHex = currentHovered && hexs[currentHovered];
@@ -102,8 +119,8 @@ const App: React.FunctionComponent = () => {
                             backgroundColor: "white",
                         }}
                     >
+                        Current Time: {currentTime}:00
                         <i>1 Tile = 1/2 Watch = 2 hours</i>
-
                         {cursorPos && `(${cursorPos[0]}, ${cursorPos[1]})`}
                         {selectedHex ? (
                             <div

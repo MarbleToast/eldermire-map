@@ -587,6 +587,11 @@ const zonePaths: { path: [number, number][]; colour: string; name: string }[] =
                 [693, 599],
                 [698, 598],
                 [699, 601],
+
+                [699, 600],
+                [684, 651],
+                [654, 626],
+                [668, 607],
                 [699, 590],
                 [706, 587],
                 [710, 587],
@@ -671,6 +676,7 @@ const zonePaths: { path: [number, number][]; colour: string; name: string }[] =
                 [647, 579],
                 [646, 587],
                 [647, 595],
+
                 [649, 602],
                 [657, 603],
                 [662, 604],

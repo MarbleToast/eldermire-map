@@ -6,8 +6,15 @@ const locations: Record<number, string> = {
     4354: "Perelline (Dungeon)", // A large tree covered in amber blossoms, surrounded by a thick stake wall. The oak door in the stake wall has an inscription in ancient Elvish: "Come now, bring ye offerings of bushels of amber, and this door to Perelline shall swing wide." Below it is a carved mural of two elves holding a wooden vase, which has an opening for flowers. This is asking for amber blossoms to be picked from the fields nearby. Inside, Ilessnya Pellenior, demi-goddess and former Queen of Arvenalora can be found, drunk and addicted to eating the flowers. She asks for death
     4185: "Cursed Tree (Mini-Dungeon)", //
     4393: "Wolf Spirit Cave (Mini-Dungeon)", // A cave filled with wolves with glowing green eyes. When a wolf is killed, a ghostly force seems to peel from their bodies, sucked into the cave. At the core is a Wolf Spirit Swarm that coalesces around the skeletal remains of a large wolf, with a small necklace in its stomach. This amulet was given by the Witch of Módar Run to another adventurer, in order to collect and bring her the souls of the dead, before he was killed and eaten by the wolf pack.
-    4604: "Blacksmith Bandits",
+    4603: "Dead Blacksmith Bandits",
+    4436: "Path to the North",
 
+    4268: "Cottontail Merry",
+
+    4437: "Secret Elvish Lab (FT)", // Experiemnting with the Mind Flayer things to use
+
+    3974: "Six-Knives Shipwreck (pesta hag)",
+    4100: "Milestone to the Spire of Hope",
     // === THE KNOTS ===
     4098: "Fort Maydew (FT)", // A crumbling fortress that once served as a bastion against the encroaching darkness, the human-built Fort Maydew now stands as a somber reminder of the Knots' fall from grace. Its stone walls are marred by creeping vines and the decay of time. The fort's courtyard, once a lively training ground, is now overrun by thorns and twisted vegetation. Miremals have taken up the bulwark, under the direction of an Ogre Howdah. The Ogre has been trying to activate a gate at the centre of the fort, which is a Stepsend. He also has a load of goblin scribblings on mud tablets which detail a scout report on Fort Nirunna, and another on the Heretic's Graveyard.
     4012: "Heretic's Graveyard (Dungeon)", // The infection has spread to a catacombs on the slopes of the mountain. Undead dungeon
@@ -17,11 +24,14 @@ const locations: Record<number, string> = {
     4350: "Northern Watchtower",
     3385: "Little Hut-hut",
     4181: "Githyanki Small Encampment", //
-
+    3765: "Ravine to Spiderlings Bridge",
     3971: "Toad King's Court",
+    4475: "Railway Track",
 
     // === MÓDAR RUN ===
     3176: "Small Hut", // The hut of the Witch of Módar Run. Originally an elven traitor working with the illithid, she was tried by the Court of Ilessan, and imprisoned. Her illithid mutations, along with Velkoryanaz's corruption affecting her and the region, allowed her to escape, but Ilessnya Pellenior's ward prevents her from doing what she truely wants - destroying Meridian, which she still believes to be inhabited by elves. She sells trinkets and such, in exchange for favours. She is, however, always manouevering her gullable customers, both through the favours she asks for and the trinkets she gives them, to escape the ward.
+
+    3261: "Magical Waste Pool",
 
     // === SUNDERED BASIN ===
     3034: "Fort Thuun (FT)", // Dwarven fort (Durzummonon)
@@ -43,6 +53,7 @@ const locations: Record<number, string> = {
     2634: "Truffle Cove",
     3514: "Spider Tree Clump",
     2380: "Spire of Hope (Dungeon)", // The Cragriver is blocked shut by a dam with a thick steel chain and pulley system connected to a tower fort. This fort, along with the area around it, seem to have warded off the corruption that has befallen so much of the rest of the surroundings. The grass is verdant, the trees are straight and sturdy, the sound of birdsong and smell of roses wafts from the courtyard. However, this is a lamia den, and is merely an illusion created by Matriarch Zzal. The jackalweres that can be found in Módar Run and on the banks on the sound end of the Cragriver are under her thrall, and will kidnap unweary travellers to be taken to the fort dungeons.
+    3304: "Slithy Tongue Cove (Slitherswamp reskin)",
 
     // === MTHUL TOR
     2042: "The King's Hall (Dungeon)",
@@ -69,6 +80,8 @@ const locations: Record<number, string> = {
     4348: "Old Githyanki Creche Caverns", // Contains a silver compass that points to whatever is whispered to it.
     4135: "Roaming Horses",
     4221: "Stone Giant Ruins",
+    4474: "Abandoned Mining Station", // Formian caverns have buried into here, in fear of the Wicker Circle burrowing into Mount Sarjorhn. They are small and are passive
+
     // === CINDERSIDE ===
     4211: "Maydew",
 
