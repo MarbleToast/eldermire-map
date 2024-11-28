@@ -394,5 +394,4 @@ const fade = (t: number) => t * t * t * (t * (t * 6 - 15) + 10);
 
 const lerp = (a: number, b: number, t: number) => (1 - t) * a + t * b;
 
-const noise = new Noise(Math.random());
-export default noise;
+export default Noise;

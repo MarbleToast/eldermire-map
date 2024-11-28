@@ -4,7 +4,7 @@ const locations: Record<number, string> = {
 
     // === GLADEMOOR
     4354: "Perelline (Dungeon)", // A large tree covered in amber blossoms, surrounded by a thick stake wall. The oak door in the stake wall has an inscription in ancient Elvish: "Come now, bring ye offerings of bushels of amber, and this door to Perelline shall swing wide." Below it is a carved mural of two elves holding a wooden vase, which has an opening for flowers. This is asking for amber blossoms to be picked from the fields nearby. Inside, Ilessnya Pellenior, demi-goddess and former Queen of Arvenalora can be found, drunk and addicted to eating the flowers. She asks for death
-    4185: "Cursed Tree (Mini-Dungeon)", //
+    4185: "Moonstone Tree (Mini-Dungeon)", //
     4393: "Wolf Spirit Cave (Mini-Dungeon)", // A cave filled with wolves with glowing green eyes. When a wolf is killed, a ghostly force seems to peel from their bodies, sucked into the cave. At the core is a Wolf Spirit Swarm that coalesces around the skeletal remains of a large wolf, with a small necklace in its stomach. This amulet was given by the Witch of Módar Run to another adventurer, in order to collect and bring her the souls of the dead, before he was killed and eaten by the wolf pack.
     4603: "Dead Blacksmith Bandits",
     4436: "Path to the North",
@@ -22,7 +22,7 @@ const locations: Record<number, string> = {
     3803: "Tar Pools",
     3509: "Fort Direndwi",
     4350: "Northern Watchtower",
-    3385: "Little Hut-hut",
+    3385: "Wallowbank", // A strange commune of undead, lizardfolk, Church of Rats and Dredge members, one where Mother Dearest is both feared and worshipped. They aren't evil per se, and Wallowbank is a strictly no-weapon community, lest the White Duke of Wallowbank, the town's creator, Once-King Runór, know ye came.
     4181: "Githyanki Small Encampment", //
     3765: "Ravine to Spiderlings Bridge",
     3971: "Toad King's Court",
@@ -38,8 +38,11 @@ const locations: Record<number, string> = {
 
     // === HAEDRON'S QUAG
     2877: "Fort Clarion (FT)", // Elvish fort
-    3212: "Old Guild Hall", // Guild hall of the Arvenaloren Guild, an Elvish war-caster's guild
-    3255: "Ruins of Hallendel", // Settlement and forward camp established to deal with the Illithid, destroyed in the Battle of Hallenhal and now lost to the bog
+    3212: "Guild District (Hallenhal)", // Guild hall of the Arvenaloren Guild, an Elvish war-caster's guild
+    3255: "Chapel District (Hallenhel)", 
+3297: "Waterfront (Hallenhal)",// 
+3296: "Vineyard District (Hallenhal)",
+3339: "Mildew District (Hallenhal)",
     3000: "Sunken Court of Ilessan (Dungeon)",
     3463: "Myconid Circle Cave",
     2452: "Evil Myconids",
@@ -86,6 +89,8 @@ const locations: Record<number, string> = {
     4211: "Maydew",
 
     // === MAUZEN PENINSULA
+	// === THE CLAMOUR
+	2681: "Chapel of Hands",
 };
 
 export default locations;

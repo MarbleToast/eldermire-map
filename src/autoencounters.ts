@@ -11,16 +11,22 @@ const autoencounters: Record<number, string> = {
 
     4434: "Livestock's Blood Trail",
 
-    3721: "Twisting Vines",
+    3721: "Twisting Vines with Brain Hoods",
     3679: "Twisting Vines",
     3680: "Twisting Vines",
+3847: "Chest in Middle of Pool",
+4013: "Shrine to Kelemvor",
 
     3549: "Spirit Elf Battalion (Night)",
     3508: "Spirit Elf Battalion (Night)",
     3592: "Spirit Elf Battalion (Night)",
     4435: "Blood Trail towards Wolf Cave", //"Moonweaver in a Bush, Blood Trail?",
     //4392: "Moonweaver in a Bush",
-
+	3761: "Subsided Formian Tunnel Under Attack",
+4138: "Perelline Guardians with Wilted Vines",
+3886: "Treant Arboretum, Destroyed by Wicker Circle",
+3929: "Perelline Guardian Destroyed by Wicker Circle",
+3802: "Wicker Circle Lumber Camp",
     3931: "Mini Map",
 
     4265: "Dead Man Climbing",
@@ -45,8 +51,8 @@ const autoencounters: Record<number, string> = {
     3804: "Too Dense to Traverse",
 
     4054: "Crimson Shambers",
-    3970: "Crimson Shambers",
-    3928: "Crimson Shambers",
+    3970: "Crimson Shambers Attacking Devils",
+    3928: "Crimson Shambers Near Giantish Obelisk",
 
     4225: "Dropped Satchel of Missing Son",
 
@@ -57,6 +63,9 @@ const autoencounters: Record<number, string> = {
     4476: "Glademoor Bank of River",
 
     4267: "Inhabited Farmhouse",
+3382: "Church of Rats Kuo-Toa Shrine",
+3469: "Wallowbank Wooden Watch Post",
+3470: "Peat Farm",
 
     // === GLADEMOOR ===
     4226: "Amber Blossoms",
@@ -82,6 +91,10 @@ const autoencounters: Record<number, string> = {
     2798: "Incarnate Gloom (d8?)",
 
     3175: "Lunarachinda Nest",
+3342: "Wallowbank Trading Caravan",
+3301: "The Tzénloch (the path you force yourself down)",
+3344: "Wallowbank Magical Waste Pool Defence Ranch",
+3343: "Wallowbank River Port",
 
     // === SARJORHN SLOPES ===
     4516: "Broken Railway Track",
@@ -111,6 +124,8 @@ const autoencounters: Record<number, string> = {
     // === CRAGRIVER PASS ===
 
     3766: "Enthralled Six-Knives",
+	2585: "Skirmish between Church of Rats and the Dredge",
+3303: "Peat Mammoth Farm",
 };
 
 export default autoencounters;

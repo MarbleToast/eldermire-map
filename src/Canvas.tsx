@@ -3,7 +3,7 @@ import noise from "./noise/Noise";
 import { HexagonData } from "./App";
 import locations from "./locations";
 import zonePaths from "./zones";
-import Noise from "noisejs";
+import Noise from "./noise/Noise";
 import autoencounters from "./autoencounters";
 
 function hexagon(x: number, y: number, r: number) {
