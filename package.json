@@ -21,9 +21,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-app-singlehtml build/index.html build/singlepage.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "singlepage": ""
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@types/noisejs": "^0.0.28"
+    "@types/noisejs": "^0.0.28",
+    "react-app-singlehtml": "^1.1.0"
   }
 }
