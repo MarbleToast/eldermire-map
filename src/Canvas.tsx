@@ -16,15 +16,15 @@ function hexagon(x: number, y: number, r: number) {
 	return path;
 }
 
-const getShading = (x: number, y: number) => {
-	const scale = 0.01;
-	const value = (Noise.perlin2(x * scale, y * scale) + 1) / 2;
-	return Math.min(Math.floor(value * 30 - 1), 20);
+const getShading = (x: number, y: number, t: number) => {
+	const scale = 0.0075;
+	const value = (Noise.perlin2(x * scale + t, y * scale + t) + 1) / 2;
+	return Math.min(Math.floor(value * 28 - 1), 20);
 };
 
-const getWind = (x: number, y: number) => {
+const getWind = (x: number, y: number, t: number) => {
 	const scale = 1;
-	const value = (Noise.perlin2(x * scale, y * scale) + 1) / 2;
+	const value = (Noise.perlin2(x * scale + t, y * scale + t) + 1) / 2;
 	return Math.min(Math.floor(value * 30 - 1), 20);
 };
 
@@ -64,10 +64,10 @@ const Canvas: React.FC<CanvasProps> = ({
 	const [_, setDebugPath] = useState<number[][]>([]);
 
 	useEffect(() => {
-		showGrid && drawAll(true);
+		drawAll(true);
 	}, [currentWatch]);
 	useEffect(() => {
-		showGrid && drawAll(false);
+		drawAll(false);
 	}, [currentSelected, currentHovered]);
 	useEffect(() => {
 		clearCanvas();
@@ -118,8 +118,11 @@ const Canvas: React.FC<CanvasProps> = ({
 							context.fillStyle = "yellow";
 						}
 
+						if (!showGrid) {
+							context.strokeStyle = "transparent";
+						}
 						context.fill(h.path);
-						showGrid && context.stroke(h.path);
+						context.stroke(h.path);
 					});
 				} else {
 					let i = 0;
@@ -134,7 +137,11 @@ const Canvas: React.FC<CanvasProps> = ({
 							x += radius * 3
 						) {
 							const path = hexagon(x + offset, y, radius);
-							const shade = getShading(x + offset, y);
+							const shade = getShading(
+								x + offset,
+								y,
+								currentWatch
+							);
 
 							if (locations[i] && showLocations) {
 								context.fillStyle = "red";
@@ -165,14 +172,18 @@ const Canvas: React.FC<CanvasProps> = ({
 								context.fillStyle = "yellow";
 							}
 
+							if (!showGrid) {
+								context.strokeStyle = "transparent";
+							}
+
 							context.fill(path);
-							showGrid && context.stroke(path);
+							context.stroke(path);
 
 							drawingPaths.push({
 								id: i,
 								path,
 								shade,
-								wind: getWind(x, y),
+								wind: getWind(x, y, currentWatch),
 								location: locations[i],
 								encounter: autoencounters[i],
 							});
@@ -246,9 +257,11 @@ const Canvas: React.FC<CanvasProps> = ({
 			const ctx = canvas.getContext("2d");
 			if (ctx) {
 				const bound = canvas.getBoundingClientRect();
+				const scaleX = canvas.width / bound.width; // relationship bitmap : element
+				const scaleY = canvas.height / bound.height;
 
-				const x = e.clientX - bound.left - canvas.offsetLeft,
-					y = e.clientY - bound.top - canvas.offsetTop;
+				const x = (e.clientX - bound.left) * scaleX,
+					y = (e.clientY - bound.top) * scaleY;
 
 				setCurrentSelected(
 					hexs.findIndex((h) => ctx.isPointInPath(h.path, x, y))
@@ -263,9 +276,11 @@ const Canvas: React.FC<CanvasProps> = ({
 			const ctx = canvas.getContext("2d");
 			if (ctx) {
 				const bound = canvas.getBoundingClientRect();
+				const scaleX = canvas.width / bound.width; // relationship bitmap : element
+				const scaleY = canvas.height / bound.height;
 
-				const x = e.clientX - bound.left - canvas.offsetLeft,
-					y = e.clientY - bound.top - canvas.offsetTop;
+				const x = (e.clientX - bound.left) * scaleX,
+					y = (e.clientY - bound.top) * scaleY;
 
 				setDebugPath((p) => {
 					const n = [...p, [x, y]];
@@ -280,11 +295,14 @@ const Canvas: React.FC<CanvasProps> = ({
 		const canvas = canvasRef.current;
 		if (canvas) {
 			const ctx = canvas.getContext("2d");
+
 			if (ctx) {
 				const bound = canvas.getBoundingClientRect();
+				const scaleX = canvas.width / bound.width; // relationship bitmap : element
+				const scaleY = canvas.height / bound.height;
 
-				const x = e.clientX - bound.left - canvas.offsetLeft,
-					y = e.clientY - bound.top - canvas.offsetTop;
+				const x = (e.clientX - bound.left) * scaleX,
+					y = (e.clientY - bound.top) * scaleY;
 
 				setCurrentHovered(
 					hexs.findIndex((h) => ctx.isPointInPath(h.path, x, y))

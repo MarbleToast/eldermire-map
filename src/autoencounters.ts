@@ -82,6 +82,9 @@ const autoencounters: Record<number, string> = {
 	4351: "Aniel, Hamlet of Ghosts",
 	4309: "Fording the River to Glademoor",
 	3932: "Six-Knives camp", // Trying to hide from the wreckage of the Savage Dawn. They are sick and do not fight, but beg for their lives
+	4018: "Bison Herd",
+	4187: "Dead Moonmother Pterodon",
+	3891: "Flaming Daggers Trying to Capture a Mudmutt",
 
 	// === MÓDAR RUN
 	2841: "Incarnate Gloom (d8?)",
@@ -95,6 +98,7 @@ const autoencounters: Record<number, string> = {
 	3301: "The Tzénloch (the path you force yourself down)",
 	3344: "Wallowbank Magical Waste Pool Defence Ranch",
 	3343: "Wallowbank River Port",
+	3135: "Bagenneik Pool",
 
 	// === SARJORHN SLOPES ===
 	4516: "Broken Railway Track",
@@ -121,11 +125,20 @@ const autoencounters: Record<number, string> = {
 	3462: "Wyvern Spotting",
 	3504: "Wyvern Spotting",
 
+	// === Sundered Basin
+	2738: "Lunarian Forces",
+
 	// === CRAGRIVER PASS ===
 
 	3766: "Enthralled Six-Knives",
 	2585: "Skirmish between Church of Rats and the Dredge",
-	3303: "Peat Mammoth Farm"
-}
+	3303: "Peat Mammoth Farm",
+	3556: "Ettercap Sanctuary",
+	3347: "Grim Legion Advance",
+	3683: "Otterkin Dam",
+	3012: "Dwarven Turnpike Inn",
+	3094: "Two Trolls Fight Over Lizardfolk Carcass",
+	2758: "Anglerfish with Caravan Illusion",
+};
 
-export default autoencounters
+export default autoencounters;
