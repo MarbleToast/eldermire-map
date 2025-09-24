@@ -139,6 +139,6 @@ const autoencounters: Record<number, string> = {
 	3012: "Dwarven Turnpike Inn",
 	3094: "Two Trolls Fight Over Lizardfolk Carcass",
 	2758: "Anglerfish with Caravan Illusion",
-};
+}
 
-export default autoencounters;
+export default autoencounters
